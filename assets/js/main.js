@@ -1,5 +1,9 @@
 /* JOYCOS homepage — language toggle, mobile nav, scroll reveal */
 
+/* Content is visible by default; this class opts in to the scroll
+   animation only when JS is actually running. */
+document.documentElement.classList.add('js');
+
 /* ---- language: html[lang] + CSS does the showing/hiding ---- */
 function setLang(lang){
   document.documentElement.lang = lang;
@@ -31,6 +35,9 @@ if(burger){
 }
 
 /* ---- reveal on scroll ---- */
+function revealAll(){
+  document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('vis'); });
+}
 if('IntersectionObserver' in window){
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(en){
@@ -38,6 +45,8 @@ if('IntersectionObserver' in window){
     });
   }, {threshold:.12});
   document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+  /* safety net: whatever happens, nothing stays hidden for long */
+  setTimeout(revealAll, 2500);
 }else{
-  document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('vis'); });
+  revealAll();
 }

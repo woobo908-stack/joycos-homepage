@@ -30,6 +30,5 @@ Open the folder in Claude Code and ask to "run the site", or:
 ## TODO before going live
 
 - [ ] Real store links in the "구매하기 / Where to buy" section (search `TODO` in index.html)
-- [ ] Confirm founding year (currently shows 1989)
-- [ ] 사업자등록번호 in the footer (currently `[입력 예정]`)
 - [ ] Host it (Cloudflare Pages / Vercel, free) and point joycos.co.kr at it
+- Founding year confirmed: 1989. 사업자등록번호 intentionally omitted for now (add to footer later if needed).

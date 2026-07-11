@@ -152,11 +152,13 @@ footer .wrap{padding-top:38px;padding-bottom:44px}
 .f-legal{margin-top:18px;line-height:2}
 .f-copy{margin-top:18px;color:rgba(240,231,213,.35)}
 
-/* ---------- reveal on scroll ---------- */
-.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
-.rv.vis{opacity:1;transform:none}
+/* ---------- reveal on scroll ----------
+   Visible by default; html.js (set by main.js) opts in to the
+   animation, so content can never be stuck invisible. */
+html.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+html.js .rv.vis{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
-  .rv{opacity:1;transform:none;transition:none}
+  html.js .rv{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
 }
 
