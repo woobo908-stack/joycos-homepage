@@ -27,8 +27,10 @@ Every visible sentence exists twice in `index.html`:
 Open the folder in Claude Code and ask to "run the site", or:
 `python3 -m http.server 8643` then open http://localhost:8643
 
-## TODO before going live
+## TODO
 
 - [ ] Real store links in the "구매하기 / Where to buy" section (search `TODO` in index.html)
-- [ ] Host it (Cloudflare Pages / Vercel, free) and point joycos.co.kr at it
+- [ ] Point joycos.co.kr at GitHub Pages (site is live at woobo908-stack.github.io/joycos-homepage; DNS change instructions already given — A records to GitHub, don't touch MX/mail/TXT)
+- [ ] Flagship section: replace stand-in photo when the real PDRN 샷 120 product photo is shot
+- [ ] Honeybee brand card: no model photography exists for this brand — swap in when available
 - Founding year confirmed: 1989. 사업자등록번호 intentionally omitted for now (add to footer later if needed).
